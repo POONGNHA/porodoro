@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 '25:00',
                 style: TextStyle(
                   color: Theme.of(context).cardColor,
-                  fontSize: 89,
+                  fontSize: 69,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -29,11 +29,26 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Flexible(
             flex: 2,
-            child: Container(),
+            child: Center(
+              child: IconButton(
+                color: Theme.of(context).cardColor,
+                iconSize: 89,
+                onPressed: () {},
+                icon: const Icon(Icons.play_circle_outline),
+              ),
+            ),
           ),
           Flexible(
             flex: 1,
-            child: Container(),
+            child: Container(
+              decoration: BoxDecoration(color: Theme.of(context).cardColor),
+              child: const Column(
+                children: [
+                  Text('Pomodoros'),
+                  Text('0'),
+                ],
+              ),
+            ),
           ),
         ],
       ),
